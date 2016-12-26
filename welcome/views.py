@@ -23,5 +23,5 @@ def live(request):
     #return HttpResponse(content="Internal error", status=500)
 
 def ready(request):
-    #return HttpResponse(PageView.objects.count())
-    return HttpResponse(content="Internal error", status=500)
+    return HttpResponse(PageView.objects.count())
+    #return HttpResponse(content="Internal error", status=500)
