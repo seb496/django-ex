@@ -19,4 +19,4 @@ def index(request):
     })
 
 def health(request):
-    return HttpResponse(content="Internal error", status=500)
+    return HttpResponse(PageView.objects.count())
