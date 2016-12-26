@@ -18,5 +18,10 @@ def index(request):
         'count': PageView.objects.count()
     })
 
-def health(request):
-    return HttpResponse(content="Internal error", status=500)
+def liveness(request):
+    return HttpResponse(PageView.objects.count())
+    #return HttpResponse(content="Internal error", status=500)
+
+def readyness(request):
+    return HttpResponse(PageView.objects.count())
+    #return HttpResponse(content="Internal error", status=500)
