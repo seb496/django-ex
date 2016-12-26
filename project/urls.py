@@ -9,8 +9,8 @@ urlpatterns = [
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^$', index),
-    url(r'^health/ready$', readyness),
-    url(r'^health/live$', liveness),
+    url(r'^health/ready$', ready),
+    url(r'^health/live$', live),
     url(r'^health$', readyness),
     url(r'^admin/', include(admin.site.urls)),
 ]
